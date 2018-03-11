@@ -40,7 +40,7 @@ favicon: "/img/favicon.ico"
 
 black-favicon: "/img/black-lab-glass.ico"
 
-background-img: "../img/paris.jpg"
+background-img: "../img/england.jpg"
 
 ##############################
 # Dynamic Text on the Header #
@@ -56,8 +56,7 @@ delete-delay: 5000
 lines: # You can add HTML Tags in the Text
   - text: "Hello World!!"
   - text: "Welcome to My Blog"
-  - text: "Stay Hungry."
-  - text: "Stay Foolish"
+  - text: "Stay Foolish, Stay Hungry."
   - text: "Keep Learning"
 
 me-img: "/img/zamroni.jpg"
