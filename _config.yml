@@ -130,10 +130,10 @@ syntax-highlight: True
 ############
 
 events:
-  - image: "/img/data.jpg"
+  - image: "/img/invisio.jpg"
     date: "March 2018 - Today"
     description: "Data Scientist"
-  - image: "/img/invisio.jpg"
+  - image: "/img/stat.jpg"
     date: "September 2014 - March 2018"
     description: "Statistics Student"
 
