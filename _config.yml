@@ -29,7 +29,7 @@ force-https: True
 
 lang: "en"
 author: "M Zamroni Rosyadi"
-title: "{ Zamroni }"
+title: "{ All About Data }"
 description: "I am Data Scientist. Always Hungry to Keep Learning"
 keywords: "zamroni, rosyadi, statistician, data scientist"
 favicon: "/img/favicon.ico"
@@ -51,11 +51,14 @@ shuffle: True # Shuffle the lines.
 loop: True
 loop-count: False # Set False for infinite loop, or set any number for finite loop.
 type-speed: 10
-start-delay: 200
+start-delay: 100
 delete-delay: 5000
 lines: # You can add HTML Tags in the Text
+  - text: "Hello World!!"
+  - text: "Welcome to My Blog"
   - text: "Stay Hungry."
   - text: "Stay Foolish"
+  - text: "Keep Learning"
 
 me-img: "/img/zamroni.jpg"
 
