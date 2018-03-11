@@ -139,13 +139,13 @@ events:
 
 # First image of the Timeline
 
-timeline-img: "/img/timeline/default.png"
+timeline-img: "/img/zamroni.jpg"
 
 ###########
 # Contact #
 ###########
 
-email: "your@email.here"
+email: "zamronirosyadi96@gmail.com"
 
 ################
 # Author Blurb #
@@ -155,7 +155,7 @@ email: "your@email.here"
 # This works best when your author blurb image has a transparent background, or matches your site background color.
 
 # if the author_blurb is not set, then this feature is skipped
-author_blurb: "Zamroni is a Data Scientist"
+author_blurb: "Anonymous"
 author_blurb_image: "/img/zamroni.jpg"
 
 ##################
