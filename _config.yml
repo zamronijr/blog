@@ -40,7 +40,7 @@ favicon: "/img/favicon.ico"
 
 black-favicon: "/img/black-lab-glass.ico"
 
-background-img: "../img/london.jpg"
+background-img: "../img/paris.jpg"
 
 ##############################
 # Dynamic Text on the Header #
