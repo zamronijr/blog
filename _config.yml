@@ -130,7 +130,7 @@ syntax-highlight: True
 ############
 
 events:
-  - image: "/img/timeline/spidertocat.png"
+  - image: "/img/data.jpg"
     date: "March 2018 - Today"
     description: "Data Scientist"
   - image: "/img/invisio.jpg"
