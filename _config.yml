@@ -137,7 +137,7 @@ syntax-highlight: True
 events:
   - image: "/img/invisio.jpg"
     date: "March 2018 - Today"
-    description: "Data Scientist"
+    description: "Stastician"
   - image: "/img/stat.jpg"
     date: "September 2014 - March 2018"
     description: "Statistics Student"
