@@ -56,8 +56,11 @@ delete-delay: 5000
 lines: # You can add HTML Tags in the Text
   - text: "Hello World!!"
   - text: "Welcome to My Blog"
-  - text: "Stay Foolish, Stay Hungry."
+  - text: "Stay Foolish, Stay Hungry. -  Steve Jobs"
   - text: "Keep Learning"
+  - text: "Dream it. Wish it. Do it"
+  - text: "Life is like riding bicyle. To keep your balance, you must KEEP MOVING. - Albert Einstein"
+
 
 me-img: "/img/zamroni.jpg"
 
