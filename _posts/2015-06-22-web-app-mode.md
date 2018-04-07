@@ -1,48 +1,31 @@
 ---
 layout: post
 section-type: post
-title: Web app mode
+title: Training and Loss
 category: tech
-tags: [ 'tutorial']
+tags:
+  - tutorial
+published: true
 ---
-You can make your website behave like a native web app in iOS and Android devices
-by providing links for the icons for each resolution:
+Training a model simply means learning (determining) good values for all the weights and the bias from labeled examples. In supervised learning, a machine learning algorithm builds a model by examining many examples and attempting to find a model that minimizes loss; this process is called empirical risk minimization.
 
-<pre><code data-trim class="yaml">
-web-app-mode: True
-
-# Icons for Web App mode
-
-icon-36p: "/img/web-app/icon-36p.png"
-icon-48p: "/img/web-app/icon-48p.png"
-icon-72p: "/img/web-app/icon-72p.png"
-icon-96p: "/img/web-app/icon-96p.png"
-icon-144p: "/img/web-app/icon-144p.png"
-icon-192p: "/img/web-app/icon-192p.png"
-</code></pre>
-
-<small>If you want to disable this feature, simply set the web-app-mode variable to False</small>
-
-This is how your website will look when added to the homescreen:
-
-![iOS](https://dl.dropboxusercontent.com/u/8522559/personal-jekyll-theme/ios.jpg)
-
-![Android](https://dl.dropboxusercontent.com/u/8522559/personal-jekyll-theme/pinned.jpg)
-
-And when the user opens it (note that it renders in fullscreen):
-
-![Web App](https://dl.dropboxusercontent.com/u/8522559/personal-jekyll-theme/web-app.jpg)
-
-# Browser status bar customization
-
-You can color the browser status bar when in mobile mode, by setting it to a color.
-
-The color is define in the site config with the following variables
-
-<pre><code data-trim class="yaml">
-##############################
-# Color the browser elements #
-##############################
-color-browser: "#000000"
-apple-status-bar-style: "black"
-</code></pre>
+Loss is the penalty for a bad prediction. That is, loss is a number indicating how bad the model's prediction was on a single example. If the model's prediction is perfect, the loss is zero; otherwise, the loss is greater. The goal of training a model is to find a set of weights and biases that have low loss, on average, across all examples. For example, Figure 3 shows a high loss model on the left and a low loss model on the right. Note the following about the figure:
+{:refdef: style="text-align: left;"}
+- The red arrow represents loss.
+- The blue line represents predictions.
+{: refdef}
+![gambar1]({{site.baseurl}}/img/mse.jpg)
+Notice that the red arrows in the left plot are much longer than their counterparts in the right plot. Clearly, the blue line in the right plot is a much better predictive model than the blue line in the left plot.
+#### Squared loss: a popular loss function
+The linear regression models we'll examine here use a loss function called squared loss (also known as L2 loss). The squared loss for a single example is as follows:
+![gambar2]({{site.baseurl}}/img/mse2.jpg)
+Mean square error (MSE) is the average squared loss per example. To calculate MSE, sum up all the squared losses for individual examples and then divide by the number of examples:
+![gambar2]({{site.baseurl}}/img/mse3.jpg)
+where:
+{:refdef: style="text-align: left;"}
+- (x,y) is an example in which x is the set of features that the model uses to make predictions and y is the examples label
+- prediction (x) is a function of the weights and bias in combination with the set of features x
+- D is data set containing many labeled examples, which are (x,y) pairs.
+- N is the number of examples in D
+{: refdef}
+Although MSE is commonly-used in machine learning, it is neither the only practical loss function nor the best loss function for all circumstances.
