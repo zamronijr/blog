@@ -18,6 +18,7 @@ A label is the thing we're predicting—the y variable in simple linear regressi
 #### Features
 A feature is an input variable—the x variable in simple linear regression. A simple machine learning project might use a single feature, while a more sophisticated machine learning project could use millions of features, specified as:
 - {X1, X2, ...., Xn}
+
 In the spam detector example, the features could include the following:
 {:refdef: style="text-align: left;"}
 - words in the email text
