@@ -33,4 +33,10 @@ At the training stage each weight and bias on each neuron will be updated contin
 The training process consists of 2 stages:
 - Forward Pass
 - Backward Pass
-
+##### Forward Pass
+Forward pass or commonly called forward propagation is the process by which we carry data on the input through each neuron in the hidden layer to the output layer which will be calculated the error
+![ann6.jpg]({{site.baseurl}}/_posts/ann6.jpg)
+The above equation is an example of a forward pass on the first architecture (see the architecture picture above) that uses ReLU as an activation function. Where i is the node on the input layer (3 input nodes), j is the node on the hidden layer whereas h is the output of the node on the hidden layer.
+##### Backward Pass
+The error we get on the forward pass will be used to update each weight and bias with a certain learning rate.
+Both of the above process will be done repeatedly until we get the value of weight and bias that can give the error value as small as possible at the output layer (at the time of forward pass)
