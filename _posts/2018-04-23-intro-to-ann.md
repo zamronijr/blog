@@ -16,4 +16,5 @@ As the name implies, the activation function functions to determine whether the 
 It can be said that the "default" activation function of a neuron is Linear. If a neuron uses a linear function, then the output of the neuron is the weighted sum of the input + bias.
 ![ann3.jpg]({{site.baseurl}}/_posts/ann3.jpg)
 Sigmoid function has a range between 0 to 1 while the range from Tanh is -1 to 1. Both of these functions are usually used for classification of 2 classes or groups of data. But there are disadvantages of these two functions.
-
+![ann4.jpg]({{site.baseurl}}/_posts/ann4.jpg)
+Basically ReLU performs a "treshold" from 0 to infinity. ReLU can also cover the weaknesses possessed by Sigmoid and Tanh
