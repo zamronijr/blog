@@ -41,8 +41,10 @@ Neurons in the input layer do not have activation function, while neurons in hid
 In Supervised Learning using Neural Network, in general, Learning consists of 2 stages, namely training and evaluation. But sometimes there is an additional stage of testing, but its not mandatory.
 At the training stage each weight and bias on each neuron will be updated continuously until the output produced in accordance with expectations. At each iteration will be a process evaluation which is usually used to determine when to stop the training process (stopping point)
 The training process consists of 2 stages:
+
 - Forward Pass
 - Backward Pass
+
 ##### Forward Pass
 Forward pass or commonly called forward propagation is the process by which we carry data on the input through each neuron in the hidden layer to the output layer which will be calculated the error
 
