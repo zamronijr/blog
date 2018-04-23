@@ -19,7 +19,7 @@ Sigmoid function has a range between 0 to 1 while the range from Tanh is -1 to 1
 ![ann4.jpg]({{site.baseurl}}/img/ann4.jpg)
 Basically ReLU performs a "treshold" from 0 to infinity. ReLU can also cover the weaknesses possessed by Sigmoid and Tanh
 #### Neural Network Architectures
-![ann5.jpg]({{site.baseurl}}/_posts/ann5.jpg)
+![ann5.jpg]({{site.baseurl}}/img/ann5.jpg)
 The above architecture is commonly referred to as Multi Layer Perceptron (MLP) or Fully-Connected Layer. The first architecture has 3 neurons in the Input Layer and 2 Output Layer nodes. Among Inputs and Outputs, there is 1 Hidden Layer with 4 neurons. While the Weight and Activation function specifications are as follows:
 ##### Weight and Bias
 Each neuron in the MLP is interconnected which is marked by arrows in the image above. Each connection has a weight that will be the value of each weight will vary.
@@ -35,7 +35,7 @@ The training process consists of 2 stages:
 - Backward Pass
 ##### Forward Pass
 Forward pass or commonly called forward propagation is the process by which we carry data on the input through each neuron in the hidden layer to the output layer which will be calculated the error
-![ann6.jpg]({{site.baseurl}}/_posts/ann6.jpg)
+![ann6.jpg]({{site.baseurl}}/img/ann6.jpg)
 The above equation is an example of a forward pass on the first architecture (see the architecture picture above) that uses ReLU as an activation function. Where i is the node on the input layer (3 input nodes), j is the node on the hidden layer whereas h is the output of the node on the hidden layer.
 ##### Backward Pass
 The error we get on the forward pass will be used to update each weight and bias with a certain learning rate.
