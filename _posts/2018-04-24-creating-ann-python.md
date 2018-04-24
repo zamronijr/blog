@@ -24,7 +24,7 @@ This object is like a dictionary, it contains a description of the data and the 
 cancer.keys()
 {% endraw %}
 </code></pre>
-![1.JPG]({{site.baseurl}}/_posts/1.JPG)
+![1.JPG]({{site.baseurl}}/img/1.JPG)
 <pre><code data-trim class="c">
 {% raw %}
 # Print full description by running:
@@ -33,7 +33,7 @@ cancer.keys()
 cancer['data'].shape
 {% endraw %}
 </code></pre>
-![2.jpg]({{site.baseurl}}/_posts/2.jpg)
+![2.jpg]({{site.baseurl}}/img/2.jpg)
 Let's set up our Data and our Labels:
 <pre><code data-trim class="c">
 {% raw %}
