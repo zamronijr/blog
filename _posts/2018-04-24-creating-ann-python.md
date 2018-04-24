@@ -60,7 +60,7 @@ scaler = StandardScaler()
 scaler.fit(X_train)
 {% endraw %}
 </code></pre>
-![3.JPG]({{site.baseurl}}/_posts/3.JPG)
+![3.JPG]({{site.baseurl}}/img/3.JPG)
 <pre><code data-trim class="c">
 {% raw %}
 # Now apply the transformations to the data:
@@ -70,14 +70,14 @@ X_test = scaler.transform(X_test)
 </code></pre>
 #### Training the model
 Now it is time to train our model. SciKit Learn makes this incredibly easy, by using estimator objects. In this case we will import our estimator (the Multi-Layer Perceptron Classifier model) from the neural_network library of SciKit-Learn!
-![3.JPG]({{site.baseurl}}/_posts/3.JPG)
+![3.JPG]({{site.baseurl}}/img/3.JPG)
 <pre><code data-trim class="c">
 {% raw %}
 from sklearn.neural_network import MLPClassifier
 {% endraw %}
 </code></pre>
 Next we create an instance of the model, there are a lot of parameters you can choose to define and customize here, we will only define the hidden_layer_sizes. For this parameter you pass in a tuple consisting of the number of neurons you want at each layer, where the nth entry in the tuple represents the number of neurons in the nth layer of the MLP model. There are many ways to choose these numbers, but for simplicity we will choose 3 layers with the same number of neurons as there are features in our data set:
-![3.JPG]({{site.baseurl}}/_posts/3.JPG)
+![3.JPG]({{site.baseurl}}/img/3.JPG)
 <pre><code data-trim class="c">
 {% raw %}
 mlp = MLPClassifier(hidden_layer_sizes=(30,30,30))
@@ -89,7 +89,7 @@ Now that the model has been made we can fit the training data to our model, reme
 mlp.fit(X_train,y_train)
 {% endraw %}
 </code></pre>
-![4.JPG]({{site.baseurl}}/_posts/4.JPG)
+![4.JPG]({{site.baseurl}}/img/4.JPG)
 You can see the output that shows the default values of the other parameters in the model. I encourage you to play around with them and discover what effects they have on your model!
 #### Predictions and Evaluation
 Now that we have a model it is time to use it to get predictions! We can do this simply with the predict() method off of our fitted model:
@@ -105,6 +105,16 @@ from sklearn.metrics import classification_report,confusion_matrix
 print(confusion_matrix(y_test,predictions))
 {% endraw %}
 </code></pre>
+![5.jpg]({{site.baseurl}}/img/5.jpg)
+<pre><code data-trim class="c">
+{% raw %}
+print(classification_report(y_test,predictions))
+{% endraw %}
+</code></pre>
+![6.jpg]({{site.baseurl}}/img/6.jpg)
+Looks like we only misclassified 3 tumors, leaving us with a 98% accuracy rate (as well as 98% precision and recall). This is pretty good considering how few lines of code we had to write! The downside however to using a Multi-Layer Preceptron model is how difficult it is to interpret the model itself. The weights and biases won't be easily interpretable in relation to which features are important to the model itself.
+
+
 
 
 
