@@ -18,5 +18,11 @@ cancer = load_breast_cancer()
 }
 {% endraw %}
 </code></pre>
+This object is like a dictionary, it contains a description of the data and the features and targets:
+<pre><code data-trim class="c">
+{% raw %}
+cancer.keys()
+{% endraw %}
+</code></pre>
 
 
