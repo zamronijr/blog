@@ -75,8 +75,8 @@ Now it is time to train our model. SciKit Learn makes this incredibly easy, by u
 from sklearn.neural_network import MLPClassifier
 {% endraw %}
 </code></pre>
-Next we create an instance of the model, there are a lot of parameters you can choose to define and customize here, we will only define the hidden_layer_sizes. For this parameter you pass in a tuple consisting of the number of neurons you want at each layer, where the nth entry in the tuple represents the number of neurons in the nth layer of the MLP model. There are many ways to choose these numbers, but for simplicity we will choose 3 layers with the same number of neurons as there are features in our data set:
 ![3.JPG]({{site.baseurl}}/img/3.JPG)
+Next we create an instance of the model, there are a lot of parameters you can choose to define and customize here, we will only define the hidden_layer_sizes. For this parameter you pass in a tuple consisting of the number of neurons you want at each layer, where the nth entry in the tuple represents the number of neurons in the nth layer of the MLP model. There are many ways to choose these numbers, but for simplicity we will choose 3 layers with the same number of neurons as there are features in our data set:
 <pre><code data-trim class="c">
 {% raw %}
 mlp = MLPClassifier(hidden_layer_sizes=(30,30,30))
@@ -112,12 +112,3 @@ print(classification_report(y_test,predictions))
 </code></pre>
 ![6.jpg]({{site.baseurl}}/img/6.jpg)
 Looks like we only misclassified 3 tumors, leaving us with a 98% accuracy rate (as well as 98% precision and recall). This is pretty good considering how few lines of code we had to write! The downside however to using a Multi-Layer Preceptron model is how difficult it is to interpret the model itself. The weights and biases won't be easily interpretable in relation to which features are important to the model itself.
-
-
-
-
-
-
-
-
-
