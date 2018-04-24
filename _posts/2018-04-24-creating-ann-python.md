@@ -89,6 +89,24 @@ Now that the model has been made we can fit the training data to our model, reme
 mlp.fit(X_train,y_train)
 {% endraw %}
 </code></pre>
+![4.JPG]({{site.baseurl}}/_posts/4.JPG)
+You can see the output that shows the default values of the other parameters in the model. I encourage you to play around with them and discover what effects they have on your model!
+#### Predictions and Evaluation
+Now that we have a model it is time to use it to get predictions! We can do this simply with the predict() method off of our fitted model:
+<pre><code data-trim class="c">
+{% raw %}
+predictions = mlp.predict(X_test)
+{% endraw %}
+</code></pre>
+Now we can use SciKit-Learn's built in metrics such as a classification report and confusion matrix to evaluate how well our model performed:
+<pre><code data-trim class="c">
+{% raw %}
+from sklearn.metrics import classification_report,confusion_matrix
+print(confusion_matrix(y_test,predictions))
+{% endraw %}
+</code></pre>
+
+
 
 
 
