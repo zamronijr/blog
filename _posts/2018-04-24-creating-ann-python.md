@@ -50,6 +50,18 @@ from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(X, y)
 {% endraw %}
 </code></pre>
+#### Data Preprocessing
+The neural network may have difficulty converging before the maximum number of iterations allowed if the data is not normalized. Multi-layer Perceptron is sensitive to feature scaling, so it is highly recommended to scale your data. Note that you must apply the same scaling to the test set for meaningful results. There are a lot of different methods for normalization of data, we will use the built-in StandardScaler for standardization.
+<pre><code data-trim class="c">
+{% raw %}
+from sklearn.preprocessing import StandardScaler
+scaler = StandardScaler()
+# Fit only to the training data
+scaler.fit(X_train)
+{% endraw %}
+</code></pre>
+![3.JPG]({{site.baseurl}}/_posts/3.JPG)
+
 
 
 
