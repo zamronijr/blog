@@ -70,7 +70,6 @@ X_test = scaler.transform(X_test)
 </code></pre>
 #### Training the model
 Now it is time to train our model. SciKit Learn makes this incredibly easy, by using estimator objects. In this case we will import our estimator (the Multi-Layer Perceptron Classifier model) from the neural_network library of SciKit-Learn!
-![3.JPG]({{site.baseurl}}/img/3.JPG)
 <pre><code data-trim class="c">
 {% raw %}
 from sklearn.neural_network import MLPClassifier
