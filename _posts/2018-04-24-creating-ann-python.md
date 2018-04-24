@@ -70,11 +70,23 @@ X_test = scaler.transform(X_test)
 </code></pre>
 #### Training the model
 Now it is time to train our model. SciKit Learn makes this incredibly easy, by using estimator objects. In this case we will import our estimator (the Multi-Layer Perceptron Classifier model) from the neural_network library of SciKit-Learn!
-</code></pre>
 ![3.JPG]({{site.baseurl}}/_posts/3.JPG)
 <pre><code data-trim class="c">
 {% raw %}
 from sklearn.neural_network import MLPClassifier
+{% endraw %}
+</code></pre>
+Next we create an instance of the model, there are a lot of parameters you can choose to define and customize here, we will only define the hidden_layer_sizes. For this parameter you pass in a tuple consisting of the number of neurons you want at each layer, where the nth entry in the tuple represents the number of neurons in the nth layer of the MLP model. There are many ways to choose these numbers, but for simplicity we will choose 3 layers with the same number of neurons as there are features in our data set:
+![3.JPG]({{site.baseurl}}/_posts/3.JPG)
+<pre><code data-trim class="c">
+{% raw %}
+mlp = MLPClassifier(hidden_layer_sizes=(30,30,30))
+{% endraw %}
+</code></pre>
+Now that the model has been made we can fit the training data to our model, remember that this data has already been processed and scaled:
+<pre><code data-trim class="c">
+{% raw %}
+mlp.fit(X_train,y_train)
 {% endraw %}
 </code></pre>
 
