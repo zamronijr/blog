@@ -33,5 +33,26 @@ cancer.keys()
 cancer['data'].shape
 {% endraw %}
 </code></pre>
+![2.jpg]({{site.baseurl}}/_posts/2.jpg)
+Let's set up our Data and our Labels:
+<pre><code data-trim class="c">
+{% raw %}
+X = cancer['data']
+y = cancer['target']
+{% endraw %}
+</code></pre>
+#### Train Test Split
+Let's split our data into training and testing sets, this is done easily with SciKit Learn's train_test_split function from model_selection:
+</code></pre>
+![2.jpg]({{site.baseurl}}/_posts/2.jpg)
+Let's set up our Data and our Labels:
+<pre><code data-trim class="c">
+{% raw %}
+from sklearn.model_selection import train_test_split
+X_train, X_test, y_train, y_test = train_test_split(X, y)
+{% endraw %}
+</code></pre>
+
+
 
 
