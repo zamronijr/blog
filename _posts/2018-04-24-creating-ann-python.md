@@ -61,6 +61,13 @@ scaler.fit(X_train)
 {% endraw %}
 </code></pre>
 ![3.JPG]({{site.baseurl}}/_posts/3.JPG)
+<pre><code data-trim class="c">
+{% raw %}
+# Now apply the transformations to the data:
+X_train = scaler.transform(X_train)
+X_test = scaler.transform(X_test)
+{% endraw %}
+</code></pre>
 
 
 
