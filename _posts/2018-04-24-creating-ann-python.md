@@ -43,8 +43,6 @@ y = cancer['target']
 </code></pre>
 #### Train Test Split
 Let's split our data into training and testing sets, this is done easily with SciKit Learn's train_test_split function from model_selection:
-</code></pre>
-![2.jpg]({{site.baseurl}}/_posts/2.jpg)
 Let's set up our Data and our Labels:
 <pre><code data-trim class="c">
 {% raw %}
