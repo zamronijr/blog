@@ -24,5 +24,14 @@ This object is like a dictionary, it contains a description of the data and the 
 cancer.keys()
 {% endraw %}
 </code></pre>
+![1.JPG]({{site.baseurl}}/_posts/1.JPG)
+<pre><code data-trim class="c">
+{% raw %}
+# Print full description by running:
+# print(cancer['DESCR'])
+# 569 data points with 30 features
+cancer['data'].shape
+{% endraw %}
+</code></pre>
 
 
