@@ -29,5 +29,6 @@ The answer to that question involves a search for the Maximum Margin Hyperplane 
 It is easiest to understand how to find the maximum margin under the assumption that the classes are linearly separable. In this case, the MMH is as far away as possible from the outer boundaries of the two groups of data points. These outer boundaries are known as the convex hull. The MMH is then the perpendicular bisector of the shortest line between the two convex hulls. Sophisticated computer algorithms that use a technique known as quadratic optimization are capable of finding the maximum margin in this way.
 ![svm4.jpg]({{site.baseurl}}/img/svm4.jpg)
 To understand this search process, we'll need to define exactly what we mean by a hyperplane. In n-dimensional space, the following equation is used:
+![svm5.jpg]({{site.baseurl}}/img/svm5.jpg)
 
 
