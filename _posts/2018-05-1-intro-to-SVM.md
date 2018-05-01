@@ -11,9 +11,9 @@ A Support Vector Machine (SVM) can be imagined as a surface that defines a bound
 SVMs can be adapted for use with nearly any type of learning task, including both classification and numeric prediction. Many of the algorithm's key successes have come in pattern recognition. Notable applications include:
 
 {:refdef: style="text-align: left;"}
-• Classification of microarray gene expression data in the field of bioinformatics to identify cancer or other genetic diseases
-• Text categorization, such as identification of the language used in a document or organizing documents by subject matter
-• The detection of rare yet important events like combustion engine failure, security breaches, or earthquakes
+- Classification of microarray gene expression data in the field of bioinformatics to identify cancer or other genetic diseases
+- Text categorization, such as identification of the language used in a document or organizing documents by subject matter
+- The detection of rare yet important events like combustion engine failure, security breaches, or earthquakes
 {: refdef}
 
 SVMs are most easily understood when used for binary classification, which is how the method has been traditionally applied.
@@ -29,4 +29,5 @@ The answer to that question involves a search for the Maximum Margin Hyperplane 
 It is easiest to understand how to find the maximum margin under the assumption that the classes are linearly separable. In this case, the MMH is as far away as possible from the outer boundaries of the two groups of data points. These outer boundaries are known as the convex hull. The MMH is then the perpendicular bisector of the shortest line between the two convex hulls. Sophisticated computer algorithms that use a technique known as quadratic optimization are capable of finding the maximum margin in this way.
 ![svm4.jpg]({{site.baseurl}}/img/svm4.jpg)
 To understand this search process, we'll need to define exactly what we mean by a hyperplane. In n-dimensional space, the following equation is used:
+
 
