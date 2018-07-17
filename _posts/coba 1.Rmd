@@ -1,0 +1,73 @@
+---
+title: "Estimasi M dan Estimasi MM pada Regresi Robust"
+author: "Muhammad Ulinnuha dan Panji Satrio Kurniawan"
+date: "17 Juli 2018"
+output:
+  html_document: default
+  pdf_document: default
+  word_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Bismillahirrohmanirrohim
+Asslmualaikum.wr.wb gaes... kali ini kami akan membahas sedikit tentang Regresi Robust menggunakan estimasi Maximum Likelihood Type (M) dengan data pada postingan sebelumnya pada regresi robust dengan estimasi Least Trimmed Square (LTS). Semoga bermanfaat ya gaes.Yuk kita mulai.
+
+## PENGINPUTAN DATA
+
+Nah penginputan data sama seperti postingan sebelumnya juga dengan syntax berikut:
+```{r}
+#input data
+data=read.csv("D:/Data3.csv")
+head(data)
+```
+
+## Estimasi M
+
+Masuk ke Estimasi M dengan syntax di bawah ini:
+
+```{r warning=FALSE, message = FALSE}
+library(MASS)
+model.M=rlm(data$Indeks.stabilitas.Sistem.Keuangan~data$IHPR+data$Kurs+data$Jumlah.uang.beredar, method="M")
+summary(model.M)
+plot(model.M$residuals)
+plot(model.M$w)
+```
+
+Dari output diatas didapatkan model persamaan regresi yang terbentuk dari estimasi nilai parameter metode estimasi M adalah:
+Indeks stabilitas sistem keuangan = 1.2672 - 0.0048 IHPR + 0.0577 Kurs - 0.0001 Jumlah uang beredar
+Estimasi pada metode ini menghasilkan Residual standard error sebesar 0.08268.
+
+## Estimasi MM
+
+```{r warning=FALSE, message = FALSE}
+model.MM=rlm(data$Indeks.stabilitas.Sistem.Keuangan~data$IHPR+data$Kurs+data$Jumlah.uang.beredar, method= "MM")
+model.MM
+summary(model.MM)
+plot(model.MM$residuals)
+plot(model.MM$w)
+```
+
+Model persamaan regresi yang terbentuk dari estimasi nilai parameter metode estimasi M adalah:
+Indeks stabilitas sistem keuangan = 1.3484 - 0.0053 IHPR + 0.0544 Kurs - 0.0001 Jumlah uang beredar
+Estimasi pada metode ini menghasilkan Residual standard error sebesar 0.05753.
+
+#Perbandingan Estimasi M, Estimasi MM dan Estimasi LTS
+
+Berdasarkan hasil estimasi parameter menggunakan tiga metode tersebut diperoleh residual standard error secara keseluruhan seperti berikut:
+Metode	        Residual Standard Error
+Estimasi LTS	  0.04521
+Estimasi M	    0.08268
+Estimasi MM	    0.05753
+
+Pada Tabel diatas dapat dilihat bahwa Estimasi LTS memilki residual standard error paling kecil diantara metode yang lainnya yaitu sebesar 0.04521. Oleh sebab itu, Estimasi LTS lebih baik digunakan dari pada dua metode lainnya dengan model estimasi LTS sebagai berikut:
+
+Indeks stabilitas sistem keuangan = 1.507 - 0.007625 IHPR + 0.06478 Kurs - 0.00004092 Jumlah uang beredar
+
+Nilai konstanta sebesar 1.507 berarti jika IHPR, Kurs dan Jumlah uang beredar mendekati nol maka nilai indeks stabilitas sistem keuangan akan bernilai mendekati konstanta bernilai 1.507. Nilai IHPR sebesar 0.007625 berarti setiap kenaikan satu satuan maka akan menurunkan indeks stabilitas sistem keuangan sebesar 0,007625 dengan syarat asumsi bahwa variabel bebas yang lain dari model regresi adalah tetap, nilai Kurs sebesar 0.06478 maka setiap kenaikan satu satuan Kurs akan menaikan Indeks stabilitas sistem keuangan sebesar 0.06478 dengan syarat asumsi bahwa variabel bebas yang lain dari model regresi adalah tetap dan nilai jumlah uang beredar sebesar 0,00004092 maka setiap kenaikan satu satuan akan menurunkan nilai indeks stabilitas sistem keuangan sebesar 0,00004092 dengan syarat asumsi bahwa variabel bebas yang lain dari model regresi adalah tetap.
+
+Oke selesai juga pembahasan kali ini. Mohon saran, komentar, perbaikan dari teman-teman dari tulisan ini. Terima Kasih Banyak telah membaca tulisan ini. Semoga bermanfaat. Semangattttttt!!!!!!
+
+Wassalamualaikum.wr.wb :))
